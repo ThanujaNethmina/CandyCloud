@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -30,54 +30,24 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, Email, calories, fat, carbs, protein) {
-  return { name, Email, calories, fat, carbs, protein };
-}
+const EmployeeLeave = () => {
+  const [employeeleaves, setLeaves] = useState([]);
 
-const rows = [
-  createData(
-    "EMP001",
-    "employee1@example.com",
-    "2024-03-15T00:00:00.00000:00",
-    "Vacation",
-    "Pending",
-    "Pending"
-  ),
-  createData(
-    "EMP001",
-    "employee1@example.com",
-    "2024-03-15T00:00:00.00000:00",
-    "Vacation",
-    "Pending",
-    "Pending"
-  ),
-  createData(
-    "EMP001",
-    "employee1@example.com",
-    "2024-03-15T00:00:00.00000:00",
-    "Vacation",
-    "Pending",
-    "Pending"
-  ),
-  createData(
-    "EMP001",
-    "employee1@example.com",
-    "2024-03-15T00:00:00.00000:00",
-    "Vacation",
-    "Pending",
-    "Pending"
-  ),
-  createData(
-    "EMP001",
-    "employee1@example.com",
-    "2024-03-15T00:00:00.00000:00",
-    "Vacation",
-    "Pending",
-    "Pending"
-  ),
-];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:5000/api/employeeleaves"
+        );
+        const data = await response.json();
+        setLeaves(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-const EmployeeLeave = ({ employee }) => {
+    fetchData();
+  }, []);
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -93,14 +63,14 @@ const EmployeeLeave = ({ employee }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell>{row.name}</StyledTableCell>
-              <StyledTableCell>{row.Email}</StyledTableCell>
-              <StyledTableCell>{row.calories}</StyledTableCell>
-              <StyledTableCell>{row.fat}</StyledTableCell>
-              <StyledTableCell>{row.carbs}</StyledTableCell>
-              <StyledTableCell>{row.protein}</StyledTableCell>
+          {employeeleaves.map((employeeleave) => (
+            <StyledTableRow key={employeeleave._id}>
+              <StyledTableCell>{employeeleave.EmployeeID}</StyledTableCell>
+              <StyledTableCell>{employeeleave.Email}</StyledTableCell>
+              <StyledTableCell>{employeeleave.Date}</StyledTableCell>
+              <StyledTableCell>{employeeleave.LeaveReason}</StyledTableCell>
+              <StyledTableCell>{employeeleave.Status}</StyledTableCell>
+              <StyledTableCell>{employeeleave.StatusReason}</StyledTableCell>
               <Stack direction="row" spacing={2} marginTop={1}>
                 <Button variant="contained" color="success">
                   Approve

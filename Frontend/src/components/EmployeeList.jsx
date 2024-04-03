@@ -13,7 +13,7 @@ const EmployeeList = () => {
         setEmployees(res.data);
         console.log(res.data);
       })
-      .catch(() => console.log("Faild to load Data"));
+      .catch(() => console.log("Failed to load Data"));
   }, []);
 
   const employeeList =
