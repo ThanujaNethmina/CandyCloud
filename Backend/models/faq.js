@@ -1,34 +1,37 @@
 const mongoose = require("mongoose");
 
-const customerSchema = new mongoose.Schema({
-  Name: {
+const faqSchema = new mongoose.Schema({
+  
+  CustomerName: {
     type: String,
     required: true,
   },
-  Address: {
-    type: String,
-    required: true,
-  },
-  phoneNumber: {
-    type: Number,
-    required: true,
-  },
+
   Email: {
     type: String,
     required: true,
   },
-  Gender: {
+
+  Pno: {
     type: String,
     required: true,
   },
-  Age: {
-    type: Number,
-    required: true,
-  },
-  Password: {
+  
+  QuestionType: {
     type: String,
     required: true,
   },
+ 
+  Question: {
+    type: String,
+    required: true,
+  },
+  
+  Answer: {
+    type: String,
+    required: true,
+  },
+
 });
 
-module.exports = Customer = mongoose.model("Customer", customerSchema);
+module.exports = Faq = mongoose.model("Faq", faqSchema);

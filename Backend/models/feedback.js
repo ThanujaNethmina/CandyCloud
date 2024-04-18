@@ -1,13 +1,6 @@
 const mongoose = require("mongoose");
 
 const feedbackSchema = new mongoose.Schema({
-  CustomerId: {
-    type: String,
-    required: true,
-  },
-  ItemID: {
-    type: String,
-  },
   CustomerName: {
     type: String,
   },
@@ -18,6 +11,9 @@ const feedbackSchema = new mongoose.Schema({
     type: Number,
   },
   Feedback: {
+    type: String,
+  },
+  Status: {
     type: String,
   },
 });
