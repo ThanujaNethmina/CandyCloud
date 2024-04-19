@@ -4,6 +4,14 @@ const Customers = require("../models/customer");
 
 const routerCustomer = express.Router();
 
+routerCustomer.get("/count", (req, res) => {
+  Customers.countDocuments()
+    .then((count) => res.json({ status: "success", data: count }))
+    .catch((error) =>
+      res.status(500).json({ status: "error", message: error.message })
+    );
+});
+
 routerCustomer.get("/", (req, res) => {
   Customers.find()
     .then((leave) => res.json(leave))
