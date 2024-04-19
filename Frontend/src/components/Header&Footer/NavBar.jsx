@@ -20,23 +20,19 @@ const navButtons = [
     label: 'Dashboard',
     pages: ['/dashboard']
   },
-
   {
     label: 'Customers',
     pages: ['/customerTbl']
   },
-
   {
     label: 'Feedbacks',
     pages: ['/feedbackTbl']
   },
-
   {
     label: 'FAQs',
     pages: ['/faqTbl']
   },
 ];
-const settings = ['Profile'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,16 +42,13 @@ function ResponsiveAppBar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   const handleButtonClick = (event, label) => {
@@ -100,12 +93,7 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center">
                     {label}
                     {pages.map((page, index) => (
-                      <Link
-                        key={index}
-                        to={page}
-                        className={`nav-link${activeButton === label ? '#431b02' : ''}`}
-                        onClick={(event) => handleButtonClick(event,label)}
-                      >
+                      <Link key={index} to={page} className={`nav-link${activeButton === label ? ' active' : ''}`} onClick={(event) => handleButtonClick(event, label)}>
                         {index === 0 ? '' : ', '}{page}
                       </Link>
                     ))}
@@ -137,7 +125,7 @@ function ResponsiveAppBar() {
               <Button
                 key={label}
                 onClick={() => {
-                  handleButtonClick(event,label);
+                  handleButtonClick(label);
                   handleCloseNavMenu();
                 }}
                 sx={{
@@ -156,28 +144,6 @@ function ResponsiveAppBar() {
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>
