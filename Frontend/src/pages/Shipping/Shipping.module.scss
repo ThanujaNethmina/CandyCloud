@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.formWrapper {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 83rem; /* Adjust the maximum width as needed */
+}
+.tabContent{
+    margin-top: 1rem;
+    min-height: 24rem;
+}

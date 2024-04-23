@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .rootBox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+        justify-content: space-between; /* Adjust spacing between items */
+        width: 100%;
+        max-height: fit-content;
+        max-width: 80rem;
+        padding: 20px;
+        .titleBox {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 800;
+            flex-grow: 1; /* Take up remaining space */
+          }
+    }
+    
+ 
+}

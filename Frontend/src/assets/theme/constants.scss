@@ -1,0 +1,38 @@
+$primaryFont: 'Ubuntu', sans-serif;
+$primaryFontSize: 14px;
+
+$primary: #ffe4d9;
+$secondary: #ff8884 ;
+$ternary: #E75480;
+
+$success: #00C853;
+$warning: #FFB800;
+$danger: #FF0001;
+$info: #5CAD77;
+
+$red: #dd2126;
+$gray: #6b6b6b;
+$black: #000000;
+$cyan: #40c4ff;
+$cyanHover: #ff8884;
+$green: #4caf50;
+$white: #ffffff;
+
+$bgColor:#FFF0F5 ;
+$bgColorSidebar:#ff8884 ;
+
+$pageMargin: 115px 45px 45px 45px;
+
+// Screen sizes
+$xxl: 1440px;
+$xl: 1280px;
+$l: 1024px;
+$m: 768px;
+$s: 540px;
+
+@mixin transition($val) {
+  transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  -webkit-transition: $val;
+}
