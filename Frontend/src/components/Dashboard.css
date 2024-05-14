@@ -1,0 +1,31 @@
+.dash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  margin-left: -100px;
+}
+
+.Content {
+  background-color: rgba(174, 176, 177, 0.508);
+  border: solid rgb(135, 132, 132);
+  width: 350px;
+  height: 150px;
+  margin-left: 50px;
+  padding-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Line {
+  display: flex;
+  align-content: center;
+  margin: auto;
+  background-color: #000000;
+  height: 2px;
+  width: 85%;
+}
+
+h4 {
+  margin-top: 20px;
+}

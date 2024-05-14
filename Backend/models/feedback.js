@@ -20,6 +20,9 @@ const feedbackSchema = new mongoose.Schema({
   Feedback: {
     type: String,
   },
+  Status: {
+    type: String,
+  },
 });
 
 module.exports = Feedback = mongoose.model("Feedback", feedbackSchema);

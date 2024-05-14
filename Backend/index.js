@@ -7,7 +7,10 @@ const routerFeedback = require("./routes/feedbacks");
 const routerSupplier = require("./routes/suppliers");
 const routerShoppingcart = require("./routes/shoppingcarts");
 const routerOrderDetail = require("./routes/orderDetails");
-const routerEmployeeLeave = require("./routes/employeeleaves");
+const routerProduct = require("./routes/products");
+const routerFAQ = require("./routes/FAQs");
+const routerAdmin = require("./routes/admins");
+const routerMaterial = require("./routes/Raw_Materials");
 
 const cors = require("cors");
 
@@ -28,7 +31,10 @@ app.use("/api/feedbacks", routerFeedback);
 app.use("/api/suppliers", routerSupplier);
 app.use("/api/shoppingcart", routerShoppingcart);
 app.use("/api/orderDetails", routerOrderDetail);
-app.use("/api/employeeleaves", routerEmployeeLeave);
+app.use("/api/products", routerProduct);
+app.use("/api/FAQs", routerFAQ);
+app.use("/api/admins", routerAdmin);
+app.use("/api/Raw_Materials", routerMaterial);
 
 const PORT = 5000;
 

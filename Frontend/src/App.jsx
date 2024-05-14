@@ -1,15 +1,12 @@
-import { useState } from "react";
-
+import React from "react";
 import "./App.css";
-import EmployeeCard from "./components/EmployeeCard";
-import EmployeeList from "./components/EmployeeList";
+import Dashboard from "./components/Dashboard";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  localStorage.setItem("userId", "66194666a02984b0db969e2f");
   return (
     <>
-      <EmployeeList />
+      <Dashboard />
     </>
   );
 }
