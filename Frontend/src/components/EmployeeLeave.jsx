@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "./Navbar";
 import Footer from "./Footer";
 import ReactToPrint from "react-to-print";
+import html2canvas from "html2canvas";
 import { styled } from "@mui/material/styles";
 import moment from "moment";
 import Table from "@mui/material/Table";
@@ -22,6 +23,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import SearchIcon from "@mui/icons-material/Search";
 import ClearIcon from "@mui/icons-material/Clear";
 import Box from "@mui/material/Box";
+import logo from "./candyCloudLOGO.png"; // Replace with the path to your logo file
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -171,7 +173,7 @@ const EmployeeLeave = () => {
       );
       console.log("Filtered Leaves:", filteredLeaves);
       setLeaves(filteredLeaves);
-      setNoResult(filteredLeaves.length === 0); // Set noResult based on whether there are search results
+      setNoResult(filteredLeaves.length === 0); // Set noResult based on whether there are searchresults
       console.log("No Result:", noResult);
     }
   };
@@ -244,109 +246,189 @@ const EmployeeLeave = () => {
           </Button>
         )}
       </div>
-      <TableContainer component={Paper}>
-        <Table
-          sx={{ minWidth: 700 }}
-          aria-label="customized table"
-          ref={componentRef}
-        >
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Employee ID</StyledTableCell>
-              <StyledTableCell>Employee Name</StyledTableCell>
-              <StyledTableCell align="center">E-mail</StyledTableCell>
-              <StyledTableCell align="center">Date</StyledTableCell>
-              <StyledTableCell>Leave Reason</StyledTableCell>
-              <StyledTableCell>Status</StyledTableCell>
-              <StyledTableCell>StatusReason</StyledTableCell>
-              <StyledTableCell align="center"> Action</StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {noResult ? (
-              <StyledTableRow>
-                <StyledTableCell colSpan={7} align="center">
-                  No results found.
-                </StyledTableCell>
-              </StyledTableRow>
-            ) : (
-              employeeleaves.map((employeeleave) => (
-                <StyledTableRow key={employeeleave._id}>
-                  <StyledTableCell>{employeeleave.EmployeeID}</StyledTableCell>
-                  <StyledTableCell>
-                    {employeeleave.EmployeeName}
-                  </StyledTableCell>
-                  <StyledTableCell>{employeeleave.Email}</StyledTableCell>
-                  <StyledTableCell>
-                    {dateFormat(employeeleave.Date)}
-                  </StyledTableCell>
-                  <StyledTableCell>{employeeleave.LeaveReason}</StyledTableCell>
-                  <StyledTableCell>{employeeleave.Status}</StyledTableCell>
-                  <StyledTableCell>
-                    {employeeleave.StatusReason}
-                  </StyledTableCell>
-
-                  <React.Fragment>
-                    <StyledTableCell>
-                      <Stack direction="row" spacing={2} marginTop={1}>
-                        <Button
-                          variant="contained"
-                          color="success"
-                          onClick={() =>
-                            handleClickOpenApprove(employeeleave._id)
-                          }
-                        >
-                          Approve
-                        </Button>
-                        <Button
-                          variant="outlined"
-                          color="warning"
-                          onClick={() =>
-                            handleClickOpenReject(employeeleave._id)
-                          }
-                        >
-                          Reject
-                        </Button>
-                        <Button
-                          variant="outlined"
-                          color="error"
-                          startIcon={<DeleteIcon />}
-                          onClick={() => handleDelete(employeeleave._id)}
-                        >
-                          Delete
-                        </Button>
-                      </Stack>
+      <div>
+        <TableContainer component={Paper}>
+          <div ref={componentRef}>
+            <Table sx={{ minWidth: 700 }} aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell>Employee ID</StyledTableCell>
+                  <StyledTableCell>Employee Name</StyledTableCell>
+                  <StyledTableCell align="center">E-mail</StyledTableCell>
+                  <StyledTableCell align="center">Date</StyledTableCell>
+                  <StyledTableCell>Leave Reason</StyledTableCell>
+                  <StyledTableCell>Status</StyledTableCell>
+                  <StyledTableCell>StatusReason</StyledTableCell>
+                  <StyledTableCell align="center"> Action</StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {noResult ? (
+                  <StyledTableRow>
+                    <StyledTableCell colSpan={7} align="center">
+                      No results found.
                     </StyledTableCell>
-                  </React.Fragment>
-                </StyledTableRow>
-              ))
-            )}
-          </TableBody>
-        </Table>
-        <div>
-          <Box
-            sx={{
-              float: "right",
-              marginTop: "20px",
-              marginBottom: "20px",
-              marginRight: "40px",
-            }}
-          >
-            <ReactToPrint
-              trigger={() => (
-                <Button variant="contained" startIcon={<DescriptionIcon />}>
-                  Generate Report
-                </Button>
-              )}
-              content={() => componentRef.current}
-              documentTitle="Leave Details Report"
-              onAfterPrint={() =>
-                alert("Leave Detail Report Successfully Downloaded !")
+                  </StyledTableRow>
+                ) : (
+                  employeeleaves.map((employeeleave) => (
+                    <StyledTableRow key={employeeleave._id}>
+                      <StyledTableCell>
+                        {employeeleave.EmployeeID}
+                      </StyledTableCell>
+                      <StyledTableCell>
+                        {employeeleave.EmployeeName}
+                      </StyledTableCell>
+                      <StyledTableCell>{employeeleave.Email}</StyledTableCell>
+                      <StyledTableCell>
+                        {dateFormat(employeeleave.Date)}
+                      </StyledTableCell>
+                      <StyledTableCell>
+                        {employeeleave.LeaveReason}
+                      </StyledTableCell>
+                      <StyledTableCell>{employeeleave.Status}</StyledTableCell>
+                      <StyledTableCell>
+                        {employeeleave.StatusReason}
+                      </StyledTableCell>
+
+                      <React.Fragment>
+                        <StyledTableCell className="hide-buttons-on-print">
+                          <Stack direction="row" spacing={2} marginTop={1}>
+                            <Button
+                              variant="contained"
+                              color="success"
+                              onClick={() =>
+                                handleClickOpenApprove(employeeleave._id)
+                              }
+                            >
+                              Approve
+                            </Button>
+                            <Button
+                              variant="outlined"
+                              color="warning"
+                              onClick={() =>
+                                handleClickOpenReject(employeeleave._id)
+                              }
+                            >
+                              Reject
+                            </Button>
+                            <Button
+                              variant="outlined"
+                              color="error"
+                              startIcon={<DeleteIcon />}
+                              onClick={() => handleDelete(employeeleave._id)}
+                            >
+                              Delete
+                            </Button>
+                          </Stack>
+                        </StyledTableCell>
+                      </React.Fragment>
+                    </StyledTableRow>
+                  ))
+                )}
+              </TableBody>
+            </Table>
+          </div>
+          <div>
+            <Box
+              sx={{
+                float: "right",
+                marginTop: "20px",
+                marginBottom: "20px",
+                marginRight: "40px",
+              }}
+            >
+              <ReactToPrint
+                trigger={() => (
+                  <Button
+                    variant="contained"
+                    startIcon={<DescriptionIcon />}
+                    //onClick={handlePrint}
+                  >
+                    Generate Report
+                  </Button>
+                )}
+                content={() => componentRef.current}
+                documentTitle="Leave Details Report"
+                onAfterPrint={() =>
+                  alert("Leave Detail Report Successfully Downloaded !")
+                }
+                removeAfterPrint={true}
+              />
+            </Box>
+          </div>
+        </TableContainer>
+      </div>
+      <style jsx="true">
+        {`
+          @media print {
+            .hide-buttons-on-print button {
+              display: none;
+            }
+
+            .table-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 20px;
+              border-bottom: 1px solid #ccc;
+            }
+
+            .table-logo {
+              width: 100px;
+              height: auto;
+            }
+
+            .table-title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+            }
+
+            .report-container {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+
+            .report-logo {
+              width: 100px;
+              height: auto;
+              margin-bottom: 20px;
+            }
+
+            .report-title {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+              text-align: center;
+              margin-bottom: 20px;
+            }
+
+            .report-table-image {
+              display: flex;
+              justify-content: center;
+              border: 1px solid #ccc;
+              padding: 20px;
+              overflow-x:auto;
+            }
+
+            @media print {
+              .report {
+                width: 100%;
+                page-break-after: always;
               }
-            />
-          </Box>
-        </div>
-      </TableContainer>
+
+              .report-logo,
+              .report-title {
+                page-break-inside: avoid;
+              }
+
+              .report-table-image {
+                page-break-inside: avoid;
+              }
+            }
+          `}
+      </style>
       {employeeLeaveData && (
         <Dialog open={openApprove} onClose={handleCloseApprove}>
           <h2>Approve Leave</h2>
