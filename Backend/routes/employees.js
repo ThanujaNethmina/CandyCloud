@@ -22,7 +22,15 @@ router.get("/salaryTotal", (req, res) => {
     {
       $group: {
         _id: null,
-        totalSalary: { $sum: "$TotalSalary" },
+        totalSalary: {
+          $sum: {
+            $add: [
+              "$Salary",
+              "$AllowancesAmount",
+              { $multiply: ["$OThours", "$AmountPerHour"] },
+            ],
+          },
+        },
       },
     },
   ])

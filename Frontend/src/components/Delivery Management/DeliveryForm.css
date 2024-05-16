@@ -1,0 +1,73 @@
+.horizontal-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+   
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-column input[type="text"],
+.form-column input[type="email"],
+.form-column input[type="date"],
+.form-column select,
+.form-column textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 15px;
+  border: 1px solid #f3a3c4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+  
+  .error-message {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust this as needed */
+  }
+  
+  .button {
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add space between columns */
+  .form-group:not(:last-child) {
+    margin-right: 10px; /* Adjust the space between columns */
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -50px;
+    margin-right: 40px;
+    margin-top: 10px; 
+  }
+  

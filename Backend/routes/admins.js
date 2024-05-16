@@ -27,6 +27,20 @@ routerAdmin.get("/:id", (req, res) => {
     .then((admin) => res.json(admin))
     .catch(() => res.status(404).json({ msg: "cannot find admins" }));
 });
+
+routerAdmin.post("/login1", (req, res) => {
+  const { Email, Password } = req.body;
+  Admin.findOne({ Email: Email }).then((user) => {
+    if (user) {
+      if (user.Password == Password) {
+        res.json("Success");
+      } else {
+        res.json("the password is incorrect");
+      }
+    }
+  });
+});
+
 routerAdmin.post("/", (req, res) => {
   Admin.create(req.body)
     .then(() => res.json({ msg: "Admin added Successfully" }))
@@ -43,4 +57,4 @@ routerAdmin.put("/:id", (req, res) => {
     .catch(() => res.status(404).json({ msg: "Cannot Update" }));
 });
 
-module.exports = routerAdmin;
+module.exports = routerAdmin;

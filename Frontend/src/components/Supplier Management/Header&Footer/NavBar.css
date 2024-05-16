@@ -1,0 +1,13 @@
+.navBar{
+    background: #c4c4c47b;
+    background-color: #c4c4c47b;
+    margin-bottom: 20px;
+}
+
+.logo{
+    max-width: 70px;
+}
+
+.nav-link.active {
+    color: #431b02; 
+}

@@ -1,0 +1,97 @@
+.from {
+  background-color: #f2e7ff;
+}
+
+.form-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+  
+}
+
+.all {
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f99c;
+}
+
+.form-column {
+  width: 80%; /* Adjust width as needed */
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5%; /* Add some margin between columns */
+}
+
+
+.form-column label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-column input[type="text"],
+.form-column input[type="email"],
+.form-column input[type="date"],
+.form-column select,
+.form-column textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 15px;
+  border: 1px solid #f3a3c4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-column textarea {
+  resize: vertical;
+}
+
+.form-column select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23555"><path d="M7 10l5 5 5-5H7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 30px;
+}
+
+.button {
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.button1 {
+  padding: 10px;
+  margin-top: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -50px;
+  margin-right: 40px;
+  margin-top: 10px; 
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}

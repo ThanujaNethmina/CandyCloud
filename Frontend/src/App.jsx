@@ -1,12 +1,17 @@
-import React from "react";
+import { useState } from "react";
+
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+import CreateAccount from './components/Customer/CreateAccount'
+import Footer from './components/Customer Management/Header&Footer/Footer'
 
 function App() {
-  localStorage.setItem("userId", "66194666a02984b0db969e2f");
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <Dashboard />
+      {<CreateAccount/>}
+      {/*<CustomerTable/>*/}
+      <Footer/>
     </>
   );
 }

@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const supplierSchema = new mongoose.Schema({
   SupplierID: {
     type: String,
-    required: true,
   },
   SupplierName: {
+    required: true,
     type: String,
   },
   SupplyingItem: {
