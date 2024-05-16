@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const employeeSchema = new mongoose.Schema({
   EmployeeId: {
     type: String,
-    required: true,
+
   },
   Name: {
     type: String,
+    required: true,
   },
   Age: {
     type: Number,
@@ -35,8 +36,8 @@ const employeeSchema = new mongoose.Schema({
   AmountPerHour: {
     type: Number,
   },
-  TotalSalary: {
-    type: Number,
+  Image: {
+    type: String,
   },
 });
 

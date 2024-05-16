@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 
 const feedbackSchema = new mongoose.Schema({
+  CustomerId: {
+    type: String,
+    required: true,
+  },
+  ItemID: {
+    type: String,
+  },
   CustomerName: {
     type: String,
   },

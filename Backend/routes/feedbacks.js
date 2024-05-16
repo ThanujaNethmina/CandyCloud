@@ -8,9 +8,10 @@ routerFeedback.get("/count", (req, res) => {
   Feedback.countDocuments()
     .then((count) => res.json({ status: "success", data: count }))
     .catch((error) =>
-      res.status(500).json({ status: "error", message: error.message })
-    );
+      res.status(500).json({ status: "error", message: error.message })
+    );
 });
+
 routerFeedback.get("/", (req, res) => {
   Feedback.find()
     .then((feedbacks) => res.json(feedbacks))

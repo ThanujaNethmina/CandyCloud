@@ -1,35 +1,33 @@
 const express = require("express");
 
-const Faqs = require("../models/faq");
+const FAQ = require("../models/FAQ");
 
-const routerFaq = express.Router();
+const routerFAQ = express.Router();
 
-routerFaq.get("/", (req, res) => {
-  Faqs.find()
-    .then((leave) => res.json(leave))
-    .catch((error) =>
-      res.status(404).json({ noOfCustomers: "No Questions found" })
-    );
+routerFAQ.get("/", (req, res) => {
+  FAQ.find()
+    .then((faqs) => res.json(faqs))
+    .catch((error) => res.status(404).json({ noOfFaqs: "No FAQs found" }));
 });
-routerFaq.get("/:id", (req, res) => {
-  Faqs.findById(req.params.id)
-    .then((leave) => res.json(leave))
-    .catch(() => res.status(404).json({ msg: "cannot find Questions" }));
+routerFAQ.get("/:id", (req, res) => {
+  FAQ.findById(req.params.id)
+    .then((faqs) => res.json(faqs))
+    .catch(() => res.status(404).json({ msg: "cannot find faqs" }));
 });
-routerFaq.post("/", (req, res) => {
-  Faqs.create(req.body)
-    .then(() => res.json({ msg: "Question added Successfully" }))
-    .catch(() => res.status(404).json({ msg: "Cannot Add Question" }));
+routerFAQ.post("/", (req, res) => {
+  FAQ.create(req.body)
+    .then(() => res.json({ msg: "FAQ added Successfully" }))
+    .catch(() => res.status(404).json({ msg: "cannot add faqs" }));
 });
-routerFaq.delete("/:id", (req, res) => {
-  Faqs.findByIdAndDelete(req.params.id)
-    .then(() => res.json({ msg: "Question Deleted Successfully" }))
-    .catch(() => res.status(404).json({ msg: "Cannot Find Question ID" }));
+routerFAQ.delete("/:id", (req, res) => {
+  FAQ.findByIdAndDelete(req.params.id)
+    .then(() => res.json({ msg: "FAQ Deleted Successfully" }))
+    .catch(() => res.status(404).json({ msg: "Cannot Find FAQ ID" }));
 });
-routerFaq.put("/:id", (req, res) => {
-  Faqs.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => res.json({ msg: "Question Updated Successfully" }))
+routerFAQ.put("/:id", (req, res) => {
+  FAQ.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => res.json({ msg: "FAQ Updated Successfully" }))
     .catch(() => res.status(404).json({ msg: "Cannot Update" }));
 });
 
-module.exports = routerFaq;
+module.exports = routerFAQ;
