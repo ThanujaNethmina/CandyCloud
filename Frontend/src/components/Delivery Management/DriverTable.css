@@ -1,0 +1,36 @@
+.search{
+    display: flex;
+    flex-direction: row;
+    max-width: 30%;
+    background-color: #ccccccac;
+    border-radius: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    margin-left: 1020px;
+  }
+  
+  .searchInput{
+    max-width: 80%;
+    height: 40px;
+    margin-left: 50px;
+    color: aliceblue;
+  }
+  
+  .searchbtn_evebtn{
+    background-color: transparent;
+    border-radius: 100px;
+    border: 0;
+  }
+  
+  .clearbtn_evebtn{
+    color: #000000;
+  }
+  
+  .noResult{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    color: red;
+    font-weight:500;
+  }

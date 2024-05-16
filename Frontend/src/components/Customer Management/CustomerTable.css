@@ -1,0 +1,119 @@
+.search{
+  display: flex;
+  flex-direction: row;
+  max-width: 30%;
+  background-color: #ccccccac;
+  border-radius: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+  margin-left: 1020px;
+}
+
+.searchInput{
+  max-width: 80%;
+  height: 40px;
+  margin-left: 50px;
+  color: aliceblue;
+}
+
+.searchbtn_evebtn{
+  background-color: transparent;
+  border-radius: 100px;
+  border: 0;
+}
+
+.clearbtn_evebtn{
+  color: #000000;
+}
+
+.noResult{
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  color: red;
+  font-weight: 500;
+}
+
+.customerTbl{
+  margin: auto;
+  max-width: 95%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; 
+    font-weight: bold; 
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #007bff; 
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  .reportgen{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    justify-content: right;
+  }
+
+  .dashCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 68px;
+    margin-bottom: 120px;
+    margin-left: -100px;
+  }
+
+  .border{
+    background-color: rgba(174, 176, 177, 0.508);
+  }
+
+  .contentDash{
+    background-color: rgba(174, 176, 177, 0.508);
+    border: solid rgb(135, 132, 132);
+    width: 300px;
+    height: 200px;
+    margin-left: 100px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .hr{
+    display: flex;
+    align-content: center;
+    margin: auto;
+    background-color: #000000;
+    height: 2px;
+    width: 85%;
+  }
+
+  h1{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h3{
+    margin-top: 30px;
+  }
+
+  .head{
+    text-decoration: underline;
+  }
