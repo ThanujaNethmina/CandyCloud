@@ -12,25 +12,29 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import logo from './candyCloudLOGO.png'
+import logo from '../Customer Management/Header&Footer/candyCloudLOGO.png'
 import './NavBar.css'
 
 const navButtons = [
   {
-    label: 'Dashboard',
-    pages: ['/dashboard']
+    label: 'Home',
+    pages: ['/mainDashboard']
   },
   {
-    label: 'Customers',
-    pages: ['/customerTbl']
+    label: 'Order Details',
+    pages: ['/deliveryOrder']
   },
   {
-    label: 'Feedbacks',
-    pages: ['/feedbackTbl']
+    label: 'Deliveries',
+    pages: ['/deliverydata']
   },
   {
-    label: 'FAQs',
-    pages: ['/faqTbl']
+    label: 'Drivers',
+    pages: ['/drivers']
+  },
+  {
+    label: 'Tracking',
+    pages: ['/tracking']
   },
 ];
 

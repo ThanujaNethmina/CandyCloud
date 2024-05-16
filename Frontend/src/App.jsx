@@ -1,15 +1,17 @@
 import { useState } from "react";
 
 import "./App.css";
-import EmployeeCard from "./components/EmployeeCard";
-import EmployeeList from "./components/EmployeeList";
+import CreateAccount from './components/Customer/CreateAccount'
+import Footer from './components/Customer Management/Header&Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <EmployeeList />
+      {<CreateAccount/>}
+      {/*<CustomerTable/>*/}
+      <Footer/>
     </>
   );
 }
