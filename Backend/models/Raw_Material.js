@@ -3,9 +3,12 @@ const mongoose = require("mongoose");
 const Raw_MaterialSchema = new mongoose.Schema({
   ItemId: {
     type: Number,
-    required: true,
   },
   product_name: {
+    type: String,
+    required: true,
+  },
+  SupplierName: {
     type: String,
   },
   Quantity: {
