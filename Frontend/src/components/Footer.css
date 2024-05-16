@@ -1,0 +1,118 @@
+.footer-clean {
+  padding: 50px 0;
+  background-color: #ffffff48;
+  color: #4b4c4d;
+  margin-top: 30px;
+}
+
+.footer-clean h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-clean ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.footer-clean ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity: 1;
+}
+
+.footer-clean .item.social {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align: center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-top: 22px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .footer-clean .item.social > a {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item.social > a {
+    margin-top: 10px;
+  }
+}
+
+.footer-clean .copyright {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.email-input-field {
+  opacity: 0.2;
+  border-radius: 8px;
+  background: #211e20;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 9px 12.7px 7px 12px;
+  width: 255px;
+  box-sizing: border-box;
+}
+.essential-icons-send {
+  margin: 2.8px 0 4.7px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 16.5px;
+  height: 16.5px;
+  box-sizing: border-box;
+}
+.your-email-address {
+  margin-right: 12px;
+  width: 201.8px;
+  overflow-wrap: break-word;
+  font-family: var(--body-body-2-font-family, "Inter");
+  font-weight: var(--body-body-2-font-weight, 400);
+  font-size: var(--body-body-2-font-size, 14px);
+  line-height: var(--body-body-2-line-height, 1.714);
+  color: #ffffff;
+}

@@ -8,7 +8,7 @@ const OrderDetailSchema = new mongoose.Schema({
   SupplierName: {
     type: String,
   },
-  SupplyingItem: {
+  RequiredItem: {
     type: String,
   },
   Date: {

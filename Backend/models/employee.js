@@ -38,6 +38,9 @@ const employeeSchema = new mongoose.Schema({
   TotalSalary: {
     type: Number,
   },
+  Image: {
+    type: String,
+  },
 });
 
 module.exports = Employee = mongoose.model("Employees", employeeSchema);
