@@ -1,0 +1,121 @@
+[
+    {
+        "_id": "65fb42b077955ddb60625876",
+        "name": "Milk Tofee",
+        "image": "images/img_unsplash_sc5stpmrvfk_305x305.png",
+        "category": "Sugary-rich",
+        "price": 520,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb448177955ddb60625878",
+        "name": "Chocolate cake",
+        "image": "images/img_unsplash_eeqbbemh9_c.png",
+        "category": "Sugary-rich",
+        "price": 1020,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb44cc77955ddb6062587a",
+        "name": "Circular Lolipop",
+        "image": "images/img_unsplash_mqt0asuoicu.png",
+        "category": "Sugary-rich",
+        "price": 150,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb457e77955ddb6062587c",
+        "name": "Mashmellow",
+        "image": "images/img_unsplash_sqymtdqymjo.png",
+        "category": "lightly sugared",
+        "price": 600,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb45db77955ddb6062587e",
+        "name": "Sesame balls/Thala Guli",
+        "image": "images/img_unsplash_thlvnkdeh1k_1.png",
+        "category": "lightly sugared",
+        "price": 220,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb461177955ddb60625880",
+        "name": "Aluwa",
+        "image": "images/img_unsplash_thlvnkdeh1k_90x99.png",
+        "category": "Sugary-rich",
+        "price": 250,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb464777955ddb60625882",
+        "name": "Coconut Tofee",
+        "image": "images/img_unsplash_hrcpo5mcedq.png",
+        "category": "Sugary-rich",
+        "price": 150,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb466e77955ddb60625884",
+        "name": "Pani Kaju",
+        "image": "images/img_unsplash_thlvnkdeh1k.png",
+        "category": "Sugary-rich",
+        "price": 100,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb46b177955ddb60625886",
+        "name": "Rulan",
+        "image": "images/img_unsplash_w96pyf0uwjs.png",
+        "category": "lightly sugared",
+        "price": 200,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb46ed77955ddb60625888",
+        "name": "Chocolate Pudding",
+        "image": "images/img_unsplash_ic0e0y6zo20.png",
+        "category": "Sugary-rich",
+        "price": 250,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb47a877955ddb6062588a",
+        "name": "Brownies",
+        "image": "images/img_unsplash_ck6tjaimjwm_185x315.png",
+        "category": "Sugary-rich",
+        "price": 200,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb480677955ddb6062588c",
+        "name": "ginger Tofee",
+        "image": "images/img_unsplash_50kffxbjiog.png",
+        "category": "lightly sugared",
+        "price": 120,
+        "__v": 0,
+        "countInStock": 100
+    },
+    {
+        "_id": "65fb483f77955ddb6062588e",
+        "name": "Cheese Cake",
+        "image": "images/img_unsplash_thlvnkdeh1k_185x315.png",
+        "category": "Sugary-rich",
+        "price": 2400,
+        "__v": 0,
+        "countInStock": 100
+    }
+]
+
+    

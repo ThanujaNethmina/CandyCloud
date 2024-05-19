@@ -1,20 +1,29 @@
 {
-  "name": "backend",
+  "name": "sweets_factory_order",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "backend of order",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js"
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
     "express": "^4.18.3",
+    "express-ejs-layouts": "^2.5.1",
     "mongoose": "^8.2.1",
-    "nodemon": "^3.1.0"
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "pdf-creator-node": "^2.3.5",
+    "prettier": "^3.2.5",
+    "stripe": "^14.24.0"
   }
 }
