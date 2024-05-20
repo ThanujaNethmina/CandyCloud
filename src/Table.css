@@ -1,0 +1,89 @@
+/* Flex container to align items horizontally */
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+}
+
+/* Search bar styles */
+.search-bar {
+  width: 550px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Content container for table and chart */
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-container table {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Table styles */
+.table-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ebeff1;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #7c207c;
+}
+
+td {
+  border-right: 1px solid #ebeff1;
+}
+
+/* Chart styles */
+.chart-content {
+  flex: 1;
+}
+
+/* Modify width of edit and delete buttons */
+.table-content button {
+  width: 70px; /* Adjust width as needed */
+}
+
+/* Total value box styles */
+.total-value-container {
+  display: flex;
+  justify-content: center; /* Center the total value container */
+  width: 100%; /* Ensure it takes the full width of the parent container */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.total-value {
+  display: inline-block;
+  padding: 20px 15px; /* Increase padding to make the box taller */
+  border: 1px solid #383232;
+  border-radius: 5px;
+  background-color: #5c1b46;
+  font-size: 24px;
+  font-weight: bold;
+  width: 200px; /* Adjust the width as needed */
+  text-align: center;
+  color: #fff; /* Ensure text is readable */
+  height: 50px; /* Increase the height */
+  line-height: 20px; /* Adjust line height if needed */
+  margin-bottom: 20px; 
+}

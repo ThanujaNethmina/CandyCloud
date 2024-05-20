@@ -1,0 +1,43 @@
+/* AddRawMaterialForm.css */
+
+/* Modal styles */
+.modal {
+    position: fixed; /* Position the modal */
+    z-index: 1; /* Make sure it's on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex; /* Make the modal flex container */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe; /* White background */
+    padding: 20px;
+    border: 2px solid #333; /* Add border */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 80%; /* Limit the maximum width of the modal */
+    max-height: 80%; /* Limit the maximum height of the modal */
+    overflow-y: auto; /* Enable vertical scrolling within the modal */
+    position: relative; /* Relative positioning for close button */
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+    text-decoration: none;
+}

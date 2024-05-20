@@ -1,0 +1,42 @@
+/* EditRawForm.css */
+
+.edit-raw-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.edit-raw-form h2 {
+  margin-bottom: 20px;
+}
+
+.edit-raw-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-raw-form input[type="text"],
+.edit-raw-form input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-raw-form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-raw-form button[type="submit"]:hover {
+  background-color: #45a049;
+}

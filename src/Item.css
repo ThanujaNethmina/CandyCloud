@@ -1,0 +1,95 @@
+/* Item.css */
+
+/* Modal styles */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Position the modal */
+  z-index: 1; /* Make sure it's on top of other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Allow scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe; /* White background */
+  margin: auto; /* Center the modal horizontally and vertically */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add border */
+  width: 80%; /* 80% width */
+  max-height: 80%; /* Limit the maximum height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling within the modal */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style inputs and buttons */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  margin-bottom: 2px; /* Reduced margin */
+  padding: 7px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}
+
+.item-form {
+  position: fixed;
+  top: 17%; /* Adjust the percentage value to move the form up or down */
+  left: 50%;
+  padding-top: 50px;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  padding: 70px;
+  max-width: 800px; /* Adjust width as needed */
+  background-color: #801a44;
+}
+
+.item-form button[type="submit"] {
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center the button horizontally */
+}

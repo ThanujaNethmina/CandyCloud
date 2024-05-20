@@ -1,0 +1,70 @@
+.table-container {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #6e0d51; /* Background color for table header */
+}
+
+/* Adjust column sizes */
+th:nth-child(1) {
+  width: 10%; /* Adjust the width for the first column */
+}
+
+th:nth-child(2) {
+  width: 10%; /* Adjust the width for the second column */
+}
+
+th:nth-child(3) {
+  width: 10%; /* Adjust the width for the third column */
+}
+
+th:nth-child(4) {
+  width: 10%; /* Adjust the width for the fourth column */
+}
+
+th:nth-child(5) {
+  width: 20%; /* Adjust the width for the fifth column */
+}
+
+th:nth-child(6) {
+  width: 10%; /* Adjust the width for the sixth column */
+}
+
+ 
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+  border: 1px;
+  border-radius: 4px;
+  background-color: #a83f85; /* Button background color */
+  color: #fff; /* Button text color */
+  margin-right: 8px; /* Add margin to create space between buttons */
+}
+
+button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+.table-container {
+  margin: 20px auto; /* Auto margin for horizontal centering */
+  width: 80%; /* Adjust width as needed */
+}
+.table-container table td:last-child {
+  width: 50px; /* Adjust the width as needed */
+}
