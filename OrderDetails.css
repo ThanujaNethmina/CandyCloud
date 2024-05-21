@@ -1,0 +1,22 @@
+.order-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust spacing between boxes */
+  }
+  
+  .order-box {
+    background-color: #f2e7ff; /* Light purple color */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+
+ 
+  
+  /* Adjust styles as needed */
+  
